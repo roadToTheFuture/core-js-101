@@ -68,11 +68,8 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(start, end) {
-  const arr = [];
-  if (start > 0) arr.push(Array.from({ length: end - start + 1 }, (number, index) => index + start));
-  if (start < 0) arr.push(Array.from({ length: -start + end + 1 }, (number, index) => index + start));
-  if (start === 0) arr.push(Array.from({ length: end + 1 }, (number, index) => index));
+function getSumBetweenNumbers(/* n1, n2 */) {
+  throw new Error('Not implemented');
 }
 
 
