@@ -471,7 +471,19 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
+   const x = Array.from(new Array(n), x => n === 1 ? 1 : 0);
+   if (n === 1) return x;
+   const result = new Array(n);
+   const y = [];
+   let counter = n;
+   while (counter > 0) {
+      result[counter - 1] = x;
+      counter -= 1;
+   }
 
+   result.forEach((elem, i) => elem[n] = 1)
+
+   return result
 }
 
 /**
